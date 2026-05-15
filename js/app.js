@@ -1,17 +1,17 @@
-
-const menuToggle = document.getElementById("menuToggle");
-const toggler = document.querySelector(".toggle-ctn");
-const closeToggle = document.getElementById("closeToggle");
+const menuToggle = document.querySelector("#menuToggle");
+const togglerCtn = document.querySelector(".toggle-ctn");
+const closeToggle = document.querySelector("#closeToggle");
 
 menuToggle.addEventListener("click", () => {
- toggler.classList.add("active");
+ togglerCtn.classList.add("active");
 });
 
 closeToggle.addEventListener("click", () => {
- toggler.classList.remove("active");
+ togglerCtn.classList.remove("active");
 });
 
-// nav active 
+// nav active
+
 const navLinks = document.querySelectorAll("nav a");
 const sections = document.querySelectorAll("section");
 

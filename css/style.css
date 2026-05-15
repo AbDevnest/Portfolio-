@@ -29,6 +29,7 @@ a {
 
 body {
  color: var(--text);
+ overflow-x: hidden;
  background: linear-gradient(135deg, #071336 0%, #0a1e3f 100%);
 }
 
@@ -101,31 +102,32 @@ header {
  border-radius: 6px;
  cursor: pointer;
  transition: all 300ms;
-
 }
+
 
 .toggle-ctn {
  position: fixed;
- right: 0;
+ right: -500px;
  top: 0;
  height: 100vh;
  width: 500px;
  padding: 30px;
  background: linear-gradient(135deg, #020617, #020617);
- display: none;
+ opacity: 0;
+ display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
  text-align: center;
  gap: 30px;
  z-index: 999;
- transition: all 300ms;
+ transition: all 300ms ease-in;
 }
 
 .toggle-ctn.active {
- display: flex;
- transition: all 300ms;
-
+ opacity: 1;
+ right: 0px;
+ transition: all 300ms ease-out;
 }
 
 /* TOGGLER CONTENT */
@@ -155,11 +157,10 @@ header {
 }
 
 .close-btn {
- position: absolute;
- top: 50px;
- left: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
-
 
 /* section css start */
 section {
